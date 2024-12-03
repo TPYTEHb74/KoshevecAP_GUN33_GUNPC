@@ -1,69 +1,90 @@
-﻿namespace Classes
+﻿namespace Memory
 {
-
     internal class Program
+
     {
         private static void Main(string[] args)
         {
+
             Console.WriteLine("Подготовка к бою:");
 
             Console.WriteLine("Введите имя бойца:");
             var name = Console.ReadLine();
 
-            Console.WriteLine("Введите начальное здоровье бойца (10-100):");
-            if (!float.TryParse(Console.ReadLine(), out var health))
+            Console.WriteLine("Введите начальное здоровье бойца (10 - 100):");
+            if (!float.TryParse(Console.ReadLine(), out var baseHealth))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Значение обнулено.");
             }
+
+            var unit = new Unit(name, baseHealth);
 
             Console.WriteLine("Введите значение брони шлема от 0, до 1:");
             if (!float.TryParse(Console.ReadLine(), out var helmArmor))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Значение обнулено.");
             }
+
+            var helm = new Helm { Armor = helmArmor };
+            unit.EquipHelm(helm);
 
             Console.WriteLine("Введите значение брони кирасы от 0, до 1:");
             if (!float.TryParse(Console.ReadLine(), out var shellArmor))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Значение обнулено.");
             }
+
+            var shell = new Shell { Armor = shellArmor };
+            unit.EquipShell(shell);
 
             Console.WriteLine("Введите значение брони сапог от 0, до 1:");
             if (!float.TryParse(Console.ReadLine(), out var bootsArmor))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Значение обнулено.");
             }
 
-            Console.WriteLine("Укажите минимальный урон оружия (1-10):");
-            if (!float.TryParse(Console.ReadLine(), out var minWeaponDamage))
+            var boots = new Boots { Armor = bootsArmor };
+            unit.EquipBoots(boots);
+
+            Console.WriteLine("Укажите минимальный урон оружия (1 - 10):");
+            if (!float.TryParse(Console.ReadLine(), out var minDamage))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Нулевое значение.");
             }
 
-            Console.WriteLine("Укажите максимальный урон оружия (10 и более):");
-            if (!float.TryParse(Console.ReadLine(), out var maxWeaponDamage))
+            Console.WriteLine("Укажите максимальный урон оружия (10 - 40):");
+            if (!float.TryParse(Console.ReadLine(), out var maxDamage))
             {
-                Console.WriteLine("Значение равно нулю.");
+                Console.WriteLine("Значение обнулено.");
             }
 
+            var weapon = new Weapon(minDamage, maxDamage);
+            unit.EquipWeapon(weapon);
 
-            Unit player = new Unit(name);
-            player.SetHealth(health);
+            Console.WriteLine($"Общий показатель брони равен: {unit.Armor}");
+            Console.WriteLine($"Фактическое значение здоровья равно: {unit.GetRealHealth()}");
 
-            Helm playerHelm = new Helm("Player's Helm") { ArmorValue = helmArmor };
-            Shell playerShell = new Shell("Player's Shell") { ArmorValue = shellArmor };
-            Boots playerBoots = new Boots("Player's Boots") { ArmorValue = bootsArmor };
+            var unit1 = new Unit("Unit 1", 20);
+            var unit2 = new Unit("Unit 2", 20);
 
-            Weapon playerWeapon = new Weapon("Player's Weapon", minWeaponDamage, maxWeaponDamage);
+            unit1.EquipWeapon(weapon);
 
-            player.EquipHelm(playerHelm);
-            player.EquipShell(playerShell);
-            player.EquipBoots(playerBoots);
-            player.EquipWeapon(playerWeapon);
+            unit2.EquipHelm(helm);
+            unit2.EquipBoots(boots);
+            unit2.EquipShell(shell);
 
+            Console.WriteLine("Боец 1:");
+            Console.WriteLine($"{unit1.Name}: здоровье {unit1.Health}, урон {unit1.Damage}");
 
-            Console.WriteLine($"Общий показатель брони равен: {player.Armor}");
-            Console.WriteLine($"Фактическое значение здоровья равно: {player._Health}");
+            Console.WriteLine("Боец 2:");
+            Console.WriteLine($"{unit2.Name}: здоровье {unit2.Health}, урон {unit2.Damage}");
+
+            var combat = new Combat();
+
+            combat.StartCombat(unit1, unit2);
+            combat.ShowResults();
+
+            Console.WriteLine("Бой окончен.");
         }
 
     }

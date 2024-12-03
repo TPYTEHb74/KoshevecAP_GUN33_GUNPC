@@ -1,101 +1,73 @@
-﻿namespace Classes
+﻿namespace Memory
 {
-    // Класс представления шлема
-    class Helm
+    public abstract class Armors
     {
-        public string Name { get; }
-        private float armorValue; // Значение брони
-        public float ArmorValue
+        public Armors()
         {
-            get => armorValue;
-            set
-            {
-                if (value < 0f)
-                {
-                    armorValue = 0f;
-                    Console.WriteLine($"Показатель брони шлема был округлен до 0.");
-                }
-                else if (value > 1f)
-                {
-                    armorValue = 1f;
-                    Console.WriteLine($"Показатель брони шлема был округлен до 1.");
-                }
-                else
-                {
-                    armorValue = value;
-                }
-            }
+            Name = GetDefaultName();
         }
 
-        public Helm(string name)
+        public Armors(string name)
         {
             Name = name;
+        }
+
+        protected abstract string GetDefaultName();
+
+        public string Name { get; }
+
+        private float ArmorValue;
+
+        public float Armor
+        {
+            get => ArmorValue;
+            init
+            {
+                ArmorValue = Math.Clamp(value, 0f, 10f);
+                if (value is < 0f or > 10f)
+                {
+                    Console.WriteLine("Значение брони было задано некорректно.");
+                }
+            }
         }
     }
 
-    // Класс представления кирасы
-    class Shell
+    public class Shell : Armors
     {
-        public string Name { get; }
-        private float armorValue;
-        public float ArmorValue
+        public Shell() : base()
         {
-            get => armorValue;
-            set
-            {
-                if (value < 0f)
-                {
-                    armorValue = 0f;
-                    Console.WriteLine($"Показатель брони кирасы был округлен до 0.");
-                }
-                else if (value > 1f)
-                {
-                    armorValue = 1f;
-                    Console.WriteLine($"Показатель брони кирасы был округлен до 1.");
-                }
-                else
-                {
-                    armorValue = value;
-                }
-            }
         }
 
-        public Shell(string name)
+        public Shell(string? name) : base(name)
         {
-            Name = name;
         }
+
+        protected override string GetDefaultName() => nameof(Shell);
     }
 
-    // Класс представления сапог
-    class Boots
+    public class Helm : Armors
     {
-        public string Name { get; }
-        private float armorValue;
-        public float ArmorValue
+        public Helm() : base()
         {
-            get => armorValue;
-            set
-            {
-                if (value < 0f)
-                {
-                    armorValue = 0f;
-                    Console.WriteLine($"Показатель брони сапог был округлен до 0.");
-                }
-                else if (value > 1f)
-                {
-                    armorValue = 1f;
-                    Console.WriteLine($"Показатель брони сапог был округлен до 1.");
-                }
-                else
-                {
-                    armorValue = value;
-                }
-            }
         }
-        // Конструктор класса сапог
-        public Boots(string name)
+
+        public Helm(string? name) : base(name)
         {
-            Name = name;
         }
+
+        protected override string GetDefaultName() => nameof(Helm);
+    }
+
+    public class Boots : Armors
+    {
+        public Boots() : base()
+        {
+        }
+
+        public Boots(string? name) : base(name)
+        {
+        }
+
+        protected override string GetDefaultName() => nameof(Boots);
     }
 }

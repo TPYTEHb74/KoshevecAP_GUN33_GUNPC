@@ -1,53 +1,44 @@
-﻿namespace Classes
+﻿namespace Memory
 {
-    class Weapon
+    public class Weapon
     {
-        public string Name { get; }
-        public float MinDamage { get; private set; }
-        public float MaxDamage { get; private set; }
-
-        // Конструкторы
         public Weapon(string name)
         {
             Name = name;
         }
-        public Weapon(string name, float minDamage, float maxDamage) : this(name)
+
+        public Weapon(string name, float minDamage, float maxDamage)
+            : this(name)
         {
             SetDamageParams(minDamage, maxDamage);
         }
 
-        // Установка параметров урона
-        public void SetDamageParams(float minDamage, float maxDamage)
+        public Weapon(float minDamage, float maxDamage)
+            : this("Unnamed weapon")
         {
-            if (minDamage > maxDamage)
-            {
-                var temp = MinDamage;
-                minDamage = maxDamage;
-                maxDamage = temp;
-                Console.WriteLine($"Некорректные входные данные для {Name}: " +
-                    $"minDamage больше maxDamage. Значения были поменяны местами.");
-            }
+            SetDamageParams(minDamage, maxDamage);
+        }
 
+        private void SetDamageParams(float minDamage, float maxDamage)
+        {
             if (minDamage < 1f)
             {
-                MinDamage = 1f;
-                Console.WriteLine($"Минимальный урон для {Name} был форсирован до 1f.");
+                minDamage = 1f;
+                Console.WriteLine($"Минимальное значение установлено 1f.");
             }
 
-            if (maxDamage <= 1f)
+            if (maxDamage > 10f)
             {
-                MaxDamage = 10f;
-                Console.WriteLine($"Максимальный урон для {Name} был установлен до 10f.");
+                maxDamage = 10f;
+                Console.WriteLine($"Максимальное значение установлено 10f.");
             }
 
-            MinDamage = minDamage;
-            MaxDamage = maxDamage;
+            Damage = new Interval(minDamage, maxDamage);
         }
 
-        // Получение урона
-        public float GetDamage()
-        {
-            return (MinDamage + MaxDamage) / 2f;
-        }
+        public float GetDamage() => Damage.Average();
+
+        public string Name { get; private set; }
+        private Interval Damage { get; set; }
     }
 }

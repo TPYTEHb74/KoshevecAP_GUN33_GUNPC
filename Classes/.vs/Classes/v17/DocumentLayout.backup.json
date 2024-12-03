@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\combats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|solutionrelative:classes\\combats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|solutionrelative:classes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\armor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|solutionrelative:classes\\armor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|solutionrelative:classes\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|c:\\users\\sasha\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\koshevecap_gun33_gunpc\\classes\\classes\\armor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{253114C5-98D2-4C9F-A4C8-9A91DC2FE05C}|Classes\\Classes.csproj|solutionrelative:classes\\armor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Combats.cs",
+              "DocumentMoniker": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Combats.cs",
+              "RelativeDocumentMoniker": "Classes\\Combats.cs",
+              "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Combats.cs*",
+              "RelativeToolTip": "Classes\\Combats.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T15:06:00.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Weapon.cs",
               "RelativeDocumentMoniker": "Classes\\Weapon.cs",
               "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Weapon.cs",
               "RelativeToolTip": "Classes\\Weapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:03:12.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T10:03:12.074Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Unit.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Unit.cs",
               "RelativeDocumentMoniker": "Classes\\Unit.cs",
               "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Unit.cs",
               "RelativeToolTip": "Classes\\Unit.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowE8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:03:00.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T10:03:00.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Armor.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Armor.cs",
               "RelativeDocumentMoniker": "Classes\\Armor.cs",
-              "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Armor.cs",
-              "RelativeToolTip": "Classes\\Armor.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA5wGQAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Armor.cs*",
+              "RelativeToolTip": "Classes\\Armor.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T10:02:40.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Program.cs",
               "RelativeDocumentMoniker": "Classes\\Program.cs",
               "ToolTip": "C:\\Users\\sasha\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\KoshevecAP_GUN33_GUNPC\\Classes\\Classes\\Program.cs",
               "RelativeToolTip": "Classes\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwEUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T09:43:14.77Z",
               "EditorCaption": ""
