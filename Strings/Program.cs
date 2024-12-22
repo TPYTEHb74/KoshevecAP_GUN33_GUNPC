@@ -8,9 +8,9 @@ namespace Strings
     {
         // Задание 1
         // Напишите метод, который принимает две строки и возвращает конкатенацию этих строк.
-        static void ConcatenateStrings(string firstString, string secondString)
+        static string ConcatenateStrings(string firstString, string secondString)
         {
-            Console.WriteLine($"Конкатенация строк: {string.Concat(firstString, " ", secondString)}");
+            return firstString + " " + secondString;
         }
 
         //Втрой вариант
@@ -28,9 +28,10 @@ namespace Strings
 
         // Задание 2
         // Напишите метод GreetUser, который получает имя(string) и возраст(int)
-        private static void GreetUser(string userName, int userAge)
+        private static string GreetUser(string userName, int userAge)
         {
-            Console.WriteLine($"Hello, {userName}!\nYou are {userAge} years old.");
+            string text = $"\nHello, {userName}!\nYou are {userAge} years old.";
+            return text;
         }
 
         // Втрой вариант
@@ -45,51 +46,41 @@ namespace Strings
         //    Console.WriteLine($"Hello, {userName}!\nYou are {userAge} You are.");
         //}
 
+
         // Задание 3
-        private static void InfoString()
+        private static string InfoStringDG(string text)
         {
-            string print = new String('*', 15);
+            string _text = "";
 
-            Console.WriteLine(print);
-            string info = "плохой день";
+            _text = $"\nКоличество символов в строке - {text.Length}\nВверхний регистр - {text.ToUpper()},\nНижний регистр - {text.ToLower()}";
 
-            Console.WriteLine($"Старая строка: {info}");
-            Console.WriteLine($"Колличество строк: {info.Length}");
-
-            Console.WriteLine(print);
-            info = info.Replace("плохой", "хороший");
-            Console.WriteLine($"Новая строка: {info}");
-            Console.WriteLine($"Колличество строк: {info.Length}");
-
-
-            Console.WriteLine(print);
-            Console.WriteLine($"Вверхний регистр {info.ToUpper()}");
-            Console.WriteLine($"Нижний регистр {info.ToLower()}");
+            return _text;
         }
+
 
         //Задание 4
-        private static void SymbolString(string str)
+        private static string SymbolString(string str)
         {
-            Console.WriteLine($"Строка целиком: {str}");
+            
             Console.WriteLine($"Первые 5 символов строки: {str.Substring(0, 5)}");
-            Console.WriteLine($"Остаток: {str = str.Substring(5)}");
-      
+           
+            return str;
         }
+
 
         // Задание 5 (два варианта)
         // Первый вариант
-        private static void StringToBilder()
+        private static StringBuilder ConcatenateStrings(string[] arr)
 
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("Название: ");
-            sb.Append(" Руководство");
-            sb.Append(" по C#");
-            Console.WriteLine(sb.ToString());
+            foreach (string s in arr)
+            {
+                sb.Append(s).Append(" ");
+            }
 
-            Console.WriteLine($"Длина: {sb.Length}");
-            Console.WriteLine($"Емкость: {sb.Capacity}");
+            return sb;
         }
         // Втрой вариант 
         private static void StringToBilderNew(string[] strings)
@@ -103,16 +94,15 @@ namespace Strings
             }
             Console.Write(sb.ToString());
             Console.WriteLine();
-
         }
+
+
         // Задание 6
         public static void ReplaceWords(string inputString, string wordToReplace, string replacementWord)
         {
             string text = inputString;
             text = text.Replace(wordToReplace, replacementWord);
             Console.WriteLine(text);
-
-
         }
 
 
@@ -121,26 +111,29 @@ namespace Strings
             //Concatenate();
             //GreetUserNew();
 
-            ConcatenateStrings("Hello", "World");
+            string Concat = ConcatenateStrings("Hello", "World");
+            Console.WriteLine(Concat);
             Console.WriteLine(new String('*', 15));
 
-            GreetUser("Alexey", 38);
 
-            InfoString();
-
+            string User = GreetUser("Alex", 43);
+            Console.WriteLine(User);
             Console.WriteLine(new String('*', 15));
-            SymbolString("Замечательный");
 
+            string string1 = InfoStringDG("Название: Руководство по C#");
+            Console.WriteLine(string1);
             Console.WriteLine(new String('*', 15));
-            StringToBilder();
 
+            string string2 = SymbolString("Замечательный");
+            Console.WriteLine(string2);
             Console.WriteLine(new String('*', 15));
-            string[] arr = { "Название:", "Руководство", "по C#" };
-            StringToBilderNew(arr);
 
+            string[] strings = { "Hello", "World", "from", "C#" };
+            StringBuilder result = ConcatenateStrings(strings);
+            Console.WriteLine(result.ToString());
             Console.WriteLine(new String('*', 15));
-            ReplaceWords("Hello world", "world", "universe");
-
         }
+
+      
     }
 }
